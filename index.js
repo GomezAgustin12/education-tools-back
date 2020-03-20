@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json({ extended: false }));
 
 //Routes
-app.use("/cards", require("./routes/Cards"));
+app.use("/cards", require("./routes/cards"));
 
 //PORT
 const PORT = process.env.PORT || 3002;

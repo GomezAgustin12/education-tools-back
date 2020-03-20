@@ -1,16 +1,19 @@
 const mongoose = require("mongoose");
 
 const CardsSchema = new mongoose.Schema({
-	img: {
-		type: String
-	},
 	title: {
 		type: String
 	},
 	subtitle: {
 		type: String
 	},
-	content: {
+	description: {
+		type: String
+	},
+	link: {
+		type: String
+	},
+	image: {
 		type: String
 	}
 });

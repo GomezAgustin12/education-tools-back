@@ -14,8 +14,10 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
 	try {
 		Cards.create(req.body);
-		await res.status(200).json({ error: false });
+		await res.status(200).json({ data: "Card Cargada", error: false });
 	} catch (error) {
 		res.status(500).json({ data: error.message });
 	}
 });
+
+module.exports = router;
