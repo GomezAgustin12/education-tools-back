@@ -5,7 +5,7 @@ const Cards = require("./../models/cards");
 router.get("/", async (req, res) => {
 	try {
 		const cards = await Cards.find({});
-		res.status(200).json({ data: cards });
+		res.status(200).json(cards);
 	} catch (error) {
 		res.status(200).json({ data: error.message });
 	}
