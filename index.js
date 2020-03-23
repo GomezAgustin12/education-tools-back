@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json({ extended: false }));
 
 //Routes
-app.use(express.static("uploads"));
+app.use(express.static("./public/image"));
 app.use("/cards", require("./routes/cards"));
 
 //PORT
