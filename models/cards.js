@@ -13,6 +13,9 @@ const CardsSchema = new mongoose.Schema({
 	link: {
 		type: String
 	},
+	orientacion: {
+		type: String
+	},
 	image: {
 		type: String
 	}

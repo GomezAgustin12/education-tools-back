@@ -25,12 +25,13 @@ router.get("/", async (req, res) => {
 
 router.post("/", upload.single("image"), async (req, res) => {
 	try {
-		const { title, subtitle, description, link } = req.body;
+		const { title, subtitle, description, link, orientacion } = req.body;
 		Cards.create({
 			title: title,
 			subtitle: subtitle,
 			description: description,
 			link: link,
+			orientacion: orientacion,
 			image: req.file.filename
 		});
 		res.status(200).json({ data: "Card Cargada", error: false });
